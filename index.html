@@ -4,15 +4,75 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{site.data.details.name}}'s Home</title>
+    <title>CV of {{site.data.details.name}}</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Hello World, this is {{site.data.details.name}}!</h1>
-    <p>Reach me at:
+    <h1>CV of {{site.data.details.name}}</p>
+    
+    <h2>Work Experience</h2>
+    {% for item in site.data.details.workexperience %}
+    <h3>{{item.title}}</h3>
     <ul>
-      {% for url in site.data.details.urls %}
-        <li><a href="http://{{url}}">{{url}}</a></li>
-      {% endfor %}
+    {% for entry in item.skills %}
+    <li>{{entry.skill}}</li>
+    {% endfor %}
     </ul>
+    {% endfor %}
+    
+    <h2>Education</h2>
+    {% for item in site.data.details.education %}
+    <h3>{{item.title}}</h3>
+    <ul>
+    {% for entry in item.skills %}
+    <li>{{entry.skill}}</li>
+    {% endfor %}
+    </ul>
+    {% endfor %}
+    
+    <h2>Seminars and Conferences</h2>
+    {% for item in site.data.details.seminars %}
+    <h3>{{item.title}}</h3>
+    <ul>
+    {% for entry in item.skills %}
+    <li>{{entry.skill}}</li>
+    {% endfor %}
+    </ul>
+    {% endfor %}
+    
+    <h2>Languages</h2>
+    <ul>
+    {% for item in site.data.details.languages %}
+    <li>{{item.title}}</li>
+    {% endfor %}
+    </ul>
+    
+    <h2>Computer Skills</h2>
+    <ul>
+    {% for item in site.data.details.computers %}
+    <li>{{item.title}}</li>
+    {% endfor %}
+    </ul>
+    
+    <h2>Personal Skills</h2>
+    <ul>
+    {% for item in site.data.details.personal %}
+    <li>{{item.title}}</li>
+    {% endfor %}
+    </ul>
+    
+    <h2>Other skills</h2>
+    <ul>
+    {% for item in site.data.details.other %}
+    <li>{{item.title}}</li>
+    {% endfor %}
+    </ul>
+    
+    <h2>Contact: </h2>
+    <p>Email: {{site.data.details.contact.email}}</p>
+    <p>Address: {{site.data.details.contact.address}}</p>
+    <p>Title: {{site.data.details.contact.title}}</p>	
+    
+    
   </body>
 </html>

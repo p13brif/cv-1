@@ -1,0 +1,18 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+# Site Settings
+locale                   : "gr-GR"
+title                    : "Emmanouil Brifas CV"
+title_separator          : "-"
+name                     : ""
+description              : "Curriculum Vitae of Emmanouil Brifas"
+url                      : ""
+baseurl                  : ""
+repository               : "p13brif/cv-1"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+# breadcrumbs            : false # true, false (default)

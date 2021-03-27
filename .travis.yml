@@ -1,17 +1,23 @@
 language: ruby
 rvm:
- - 2.2.11
- - jekyll
- 
- # branch whitelist, only for GitHub Pages
-#branches:
- # only:
-  #- master2
-  
-#cache: 
-  # - bundler # caching bundler gem packages will speed up build
- # directories:
-  #  - _site/site/
+- 2.2
 
-#NETLIFY_AUTH_TOKEN: k8-TxK-LFmFjPZIb1JMk530CRgWbJ7AnZMUyI6VpoP0
-#NETLIFY_SITE_ID: 58827cd5-2315-4e78-8555-3b2fbffb2b76    
+# install jekyll from gemfile
+install: 
+   - bundle install
+   - rake
+   - chmod +x ./scripts/build.sh
+   - ./scripts/build.sh
+
+# build site
+scripts: true
+
+# deploy to netlify
+after_success: 
+   - chmod +x ./scripts/deploy.sh
+   - ./scripts/deploy.sh
+
+# branch whitelist, only for GitHub Pages
+branches:
+  only:
+  - master2

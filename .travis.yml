@@ -6,7 +6,6 @@ before_install:
   - gem install bundler -v 1.17.3
   - rm Gemfile.lock
   - bundle _1.17.3_ install
-  - cd $TRAVIS_BUILD_DIR/_site/site
 
 # install jekyll from gemfile
 install: 

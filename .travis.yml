@@ -1,15 +1,16 @@
 language: ruby
 rvm:
-- 2.3.8
+- 2.2.11
 
 #before_install:
- # - gem install bundler -v 1.17.3
+ # - gem install bundler -v 2.2.11
  # - rm Gemfile.lock
- # - bundle _1.17.3_ install
+ # - bundle _2.2.11_ install
 
 
 # install jekyll from gemfile
 install: 
+   - bundle update --bundler
    - bundle install
    - rake
    - chmod +x ./scripts/build.sh

@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.2
+- 2.5
 
 before_install:
   - gem install bundler -v 1.17.3
@@ -28,4 +28,5 @@ branches:
   only:
   - master2
   
-  
+notifications:
+  email: false

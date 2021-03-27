@@ -12,8 +12,7 @@ before_install:
 install: 
    - bundle install
    - rake
-   - chmod +x ./scripts/build.sh
-   - ./scripts/build.sh
+   - jekyll build
 
 # build site
 scripts: true

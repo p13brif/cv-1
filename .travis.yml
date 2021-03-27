@@ -1,4 +1,25 @@
 language: ruby
 rvm:
- - 2.2
- - jekyll
+  - 2.6.3
+
+# branch whitelist, only for GitHub Pages
+branches:
+  only:
+  - master2
+
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+
+cache: 
+  - bundler # caching bundler gem packages will speed up build
+  directories:
+    - _site/site/
+    
+# Optional: disable email notifications about the outcome of your builds
+notifications:
+  email: false
+  
+NETLIFY_AUTH_TOKEN: k8-TxK-LFmFjPZIb1JMk530CRgWbJ7AnZMUyI6VpoP0
+NETLIFY_SITE_ID: 58827cd5-2315-4e78-8555-3b2fbffb2b76

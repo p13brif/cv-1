@@ -3,16 +3,17 @@ rvm:
 - 2.2
 
 before_install:
-  - gem install bundler -v 1.17.3
-  - rm Gemfile.lock
-  - bundle _1.17.3_ install
+  before_install:
+  - yes | gem update --system --force
+  - gem install bundler
 
 
 # install jekyll from gemfile
 install: 
    - bundle install
    - rake
-   - jekyll build
+   - chmod +x ./scripts/build.sh
+   - ./scripts/build.sh
 
 # build site
 scripts: true
@@ -26,3 +27,6 @@ after_success:
 branches:
   only:
   - master2
+  
+notifications:
+  email: false  

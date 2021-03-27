@@ -2,4 +2,3 @@
 set -e # halt script on error
 
 jekyll build
-_site/site/

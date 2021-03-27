@@ -4,14 +4,14 @@ rvm:
  - jekyll
  
  # branch whitelist, only for GitHub Pages
-branches:
-  only:
-  - master2
+#branches:
+ # only:
+  #- master2
   
-cache: 
-  - bundler # caching bundler gem packages will speed up build
-  directories:
-    - _site/site/
+#cache: 
+  # - bundler # caching bundler gem packages will speed up build
+ # directories:
+  #  - _site/site/
 
-NETLIFY_AUTH_TOKEN: k8-TxK-LFmFjPZIb1JMk530CRgWbJ7AnZMUyI6VpoP0
-NETLIFY_SITE_ID: 58827cd5-2315-4e78-8555-3b2fbffb2b76    
+#NETLIFY_AUTH_TOKEN: k8-TxK-LFmFjPZIb1JMk530CRgWbJ7AnZMUyI6VpoP0
+#NETLIFY_SITE_ID: 58827cd5-2315-4e78-8555-3b2fbffb2b76    

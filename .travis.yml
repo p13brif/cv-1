@@ -16,7 +16,7 @@ install:
    - ./scripts/build.sh
 
 # build site
-scripts: true
+script: true
 
 # deploy to netlify
 after_success: 

@@ -6,4 +6,4 @@ zip -r website.zip _site
 curl -H "Content-Type: application/zip" \
      -H "Authorization: Bearer $NETLIFYKEY" \
      --data-binary "@website.zip" \
-     https://cv-emmanouil-brifas.netlify.app/
+     https://api.netlify.com/api/v1/sites/cv-emmanouil-brifas.netlify.app/deploys

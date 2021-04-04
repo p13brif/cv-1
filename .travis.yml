@@ -30,7 +30,7 @@ after_success:
 # branch whitelist, only for GitHub Pages
 branches:
   only:
-  - master2
+  - master
   
 notifications:
   email: false
